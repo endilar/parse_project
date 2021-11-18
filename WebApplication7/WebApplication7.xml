@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApplication7</name>
+    </assembly>
+    <members>
+        <member name="M:WebApplication7.Controllers.ParserController.RunParser(WebApplication7.Entities.Requests.RunParserRequest)">
+             <remarks>
+             Sample request:
+            
+                 POST /v1/parser/run-parse
+                 {
+                    "ParserType": "1"
+                 }
+            
+             </remarks>
+             <response code="200">...</response>
+             <response code="400">...</response>
+             <response code="500">...</response>
+        </member>
+        <member name="M:WebApplication7.Controllers.ParserController.Compare(WebApplication7.Entities.Requests.UploadFilesRequest)">
+             <remarks>
+             Sample request:
+            
+                 GET /v1/parser/compare
+            
+             </remarks>
+             <response code="200">...</response>
+             <response code="400">...</response>
+             <response code="500">...</response>
+        </member>
+        <member name="T:WebApplication7.Entities.Enums.ParserTypeEnum">
+            <summary>
+            ParserTypeEnum:
+            - 1 - Comfy
+            - 2 - Foxtrot
+            - 3 - Hotline
+            </summary>
+        </member>
+        <member name="T:WebApplication7.Entities.Requests.RunParserRequest">
+            <summary>
+            RunParserRequest
+            </summary>
+        </member>
+        <member name="P:WebApplication7.Entities.Requests.RunParserRequest.ParserType">
+            <summary>
+            Select parser type
+            </summary>
+            <example>ParserTypeEnum</example>
+        </member>
+        <member name="T:WebApplication7.Entities.Responses.ErrorMessageResponse">
+            <summary>
+            ErrorMessageResponse
+            </summary>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ErrorMessageResponse.Errors">
+            <summary>
+            Dictionary of errors ("Message": "text message ...")
+            </summary>
+            <example>"Message": "The email address and/or password you entered is incorrect. Please try again"</example>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ErrorMessageResponse.Status">
+            <summary>
+            The status code of http
+            </summary>
+            <example>400</example>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ErrorMessageResponse.Title">
+            <summary>
+            Title
+            </summary>
+            <example>One or more validation errors occurred.</example>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ErrorMessageResponse.TraceId">
+            <summary>
+            Trace Id
+            </summary>
+            <example>80000009-0001-fc00-b63f-84710c7967bb</example>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ErrorMessageResponse.Type">
+            <summary>
+            Type
+            </summary>
+            <example>https://tools.ietf.org/html/rfc7231#section-6.1</example>
+        </member>
+        <member name="T:WebApplication7.Entities.Responses.ReportMessageResponse">
+            <summary>
+            ReportMessageResponse
+            </summary>
+        </member>
+        <member name="M:WebApplication7.Entities.Responses.ReportMessageResponse.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            ReportMessageResponse constructor
+            </summary>
+        </member>
+        <member name="P:WebApplication7.Entities.Responses.ReportMessageResponse.Message">
+            <summary>
+            The text message 
+            </summary>
+            <example>"message": "Successful email verification."</example>
+        </member>
+    </members>
+</doc>
